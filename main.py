@@ -28,7 +28,7 @@ weather_data = response.json()
 
 will_rain = False
 for forecast in weather_data['list']:
-    if int(forecast['weather'][0]['id']) < 700:
+    if int(forecast['weather'][0]['id']) > 700:
         will_rain = True
 
 if will_rain:
